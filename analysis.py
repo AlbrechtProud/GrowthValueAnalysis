@@ -3,8 +3,6 @@ import urllib.request
 import zipfile
 from scipy.stats import jarque_bera
 
-# from pandas.compat import StringIO
-
 
 def download_file(source_url, filename):
     urllib.request.urlretrieve(source_url, filename)
@@ -27,11 +25,11 @@ def unzip_files():
 
 pd.options.display.float_format = '{:.4f}'.format
 
-# download_url = 'https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_International_Indices.zip'
-# filename = r'C:\Users\leand\Documents\Source_Data\indeces.zip'
+download_url = 'https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_International_Indices.zip'
+filename = r'C:\Users\leand\Documents\Source_Data\indeces.zip'
 
-# download_file(source_url=download_url, filename=filename)
-# unzip_files()
+download_file(source_url=download_url, filename=filename)
+unzip_files()
 
 source_EUWOUK = r'C:\Users\leand\Documents\Source_Data\indeces_extr\Ind_Eur_WOut_UK.dat'
 source_Asia_Pac = r'C:\Users\leand\Documents\Source_Data\indeces_extr\Ind_Asia_Pacific.Dat'
